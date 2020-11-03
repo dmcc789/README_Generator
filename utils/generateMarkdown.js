@@ -18,9 +18,9 @@ function generateMarkdown(data) {
   ### Contact
   ${data.createdBy}
   ${data.email}
-  
+
   #### Credits
-  © Copyright ${data.year} ${data.createdBy}
+  © Copyright ${data.year} ${data.title}
 `;
 }
 
