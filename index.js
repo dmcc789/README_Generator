@@ -30,12 +30,12 @@ const questions = [
     {
         type: "input",
         name: "description",
-        message: "Enter a description of your application: ",
+        message: "Enter a description of your application:",
     },
     {
         type: "input",
         name: "linktodeployed",
-        message: "Link to the deployed Application: "
+        message: "Link to the deployed Application:"
     },
     {
         type: "checkbox",
@@ -45,6 +45,11 @@ const questions = [
             "MIT",
             "Apache",
         ],  
+    },
+    {
+        type: "input",
+        name: "year",
+        message: "Year:"
     },
 ];
 
