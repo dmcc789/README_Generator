@@ -2,8 +2,8 @@ const inquirer = require("inquirer");
 const fs = require('fs');
 const util = require('util');
 
-// const generateREADME = require("./utils/generateMarkdown");
-// const writeFileAsync = util.promisify(fs.writeFile);
+const generateREADME = require("./utils/generateMarkdown");
+const writeFileAsync = util.promisify(fs.writeFile);
 
 // array of questions for user
 const questions = [
@@ -48,31 +48,33 @@ const questions = [
     },
 ];
 
-// // function to write README file
-// function writeToFile(fileName, data) {
-    
-//     const filename = data.name.toLowerCase().split(' ').join('') + ".json";
-    
-//     fs.writeFile(filename, JSON.stringify(data, null, '\t'), function(err) {
+function promptQuestions() {
+    return inquirer.prompt(questions);
+};
 
-//         if (err) {
-//           return console.log(err);
-//         }
+// function to write README file
+// function writeToFile("README.md", data) {
     
-//         console.log("Success!");
-//     });
+  
 // }
 
-// // function to initialize program
-// function init() {
-    
-//    inquirer.prompt(questions).then(function(data) {
 
-//     writeToFile();
-//    })
+// function to initialize program
+function init() {
 
+   promptQuestions().then(function(answers){
+    const README = generateREADME(answers);
+    return writeFileAsync("README.md", README);
+   })
+   .then(function(){
+       console.log("Successfully wrote to README.md file");
+   })
+   .catch(function(err){
+       console.log(err);
+   });
+   
     
-// }
+};
 
 // function call to initialize program
 init();
