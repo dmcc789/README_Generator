@@ -1,17 +1,14 @@
-# undefined
-  ![License](https://img.shields.io/badge/License-MIT-blue.svg "License Badge")
-
-  ## Link to the Deployed Application
-  
+# README_Generator
 
   ## Link to Github Repo
-  https://github.com/dmcc789/Deirdre Cruice
+  https://github.com/dmcc789/Deirdre Cruice Cabanel
 
   ## Description
-  Read Me Generator is an application that creates a README.md file via the command line and utilizing the inquirer npm package.
+  Read Me Generator is an application run via the command line that creates a README.md file based on a series of questions utilizing the inquirer npm package.
  
   ## License
   MIT
+  ![License](https://img.shields.io/badge/License-MIT-blue.svg "License Badge")
 
   #### Credits
-  © 2020 Deirdre Cruice
+  © Copyright 2020 Deirdre Cruice Cabanel
