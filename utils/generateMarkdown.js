@@ -6,21 +6,21 @@ function generateMarkdown(data) {
   ${data.linktodeployed}
 
   ## Link to Github Repo
-  https://github.com/${data.username}/${data.createdBy}
+  https://github.com/${data.username}/${data.title}
 
   ## Description
   ${data.description}
  
   ## License
   ${data.license}
-  ![License](https://img.shields.io/badge/License-${data.license}-blue.svg "License Badge")
+  ## ![License](https://img.shields.io/badge/License-${data.license}-blue.svg "License Badge")
 
   ### Contact
   ${data.createdBy}
   ${data.email}
 
   #### Credits
-  © Copyright ${data.year} ${data.title}
+  © Copyright ${data.year} ${data.createdBy}
 `;
 }
 
